@@ -10,6 +10,12 @@ spring:
     url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=CTT&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
     username: root
     password: 123456
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      #采样率值介于0-1之间，1表示全部采集
+      probability: 1
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
