@@ -1,0 +1,30 @@
+server:
+  port: 3366
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      name: config
+      profile: dev
+      uri: http://localhost:3344
+
+  #rabbitmq相关配置15672是web管理界面的端口，5672是mq访问端口
+  rabbitmq:
+    host: 10.71.4.179
+    port: 5672
+    username: guest
+    password: guest
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

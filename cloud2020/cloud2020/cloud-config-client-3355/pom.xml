@@ -9,17 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-config-center-3344</artifactId>
+    <artifactId>cloud-config-client-3355</artifactId>
     <dependencies>
-        <!--config server-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency>
-
+        <!-- 添加消息总线RabbitMQ支持 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency><!-- 引用自己定义的api通用包，可以使用Payment支付Entity -->
             <groupId>com.sawyer.springcloud</groupId>
@@ -58,6 +57,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 
 </project>
