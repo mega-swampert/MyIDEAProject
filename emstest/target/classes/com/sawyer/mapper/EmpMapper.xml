@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sawyer.dao.EmpDAO">
+
+    <select id="findAll" resultType="com.sawyer.entity.Emp">
+        select id,name,salary,age,bir from t_emp
+    </select>
+
+
+    <insert id="save" parameterType="com.sawyer.entity.Emp">
+        insert into t_emp values (#{id},#{name},#{salary},#{age},#{bir})
+    </insert>
+
+    <delete id="delete" parameterType="String">
+        delete from t_emp where id=#{id}
+    </delete>
+    
+    <select id="find" parameterType="String" resultType="com.sawyer.entity.Emp">
+        select  id,name,salary,age,bir from t_emp
+        where id=#{id}
+    </select>
+
+    <update id="update" parameterType="com.sawyer.entity.Emp">
+        update t_emp set name=#{name},salary=#{salary},age=#{age},bir=#{bir}
+        where id=#{id}
+    </update>
+
+</mapper>

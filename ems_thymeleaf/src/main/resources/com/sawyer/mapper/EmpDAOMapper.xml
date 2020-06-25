@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sawyer.dao.EmpDAO">
+
+    <!--    查询所有-->
+    <select id="findAll" resultType="Emp">
+
+        select  id,name,salary,age,bir from t_emp
+    </select>
+
+    <!--    添加员工-->
+    <insert id="save" parameterType="Emp">
+        insert into t_emp values (#{id},#{name},#{salary},#{age},#{bir})
+    </insert>
+
+    <!--    删除员工-->
+    <delete id="delete" parameterType="String">
+        delete from t_emp where id=#{id}
+    </delete>
+
+    <!--    根据ID查询员工-->
+    <select id="find" parameterType="String" resultType="Emp">
+        select id,name,salary,age,bir from t_emp where id =#{id}
+    </select>
+
+    <!--    修改员工-->
+    <update id="update" parameterType="Emp">
+        update t_emp set name=#{name},salary=#{salary},age=#{age},bir=#{bir}
+        where id=#{id}
+    </update>
+</mapper>

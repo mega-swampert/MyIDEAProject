@@ -1,0 +1,48 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "com.spring.bean.Person",
+      "sourceType": "com.spring.bean.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.spring.bean.Person"
+    },
+    {
+      "name": "person.birth",
+      "type": "java.util.Date",
+      "sourceType": "com.spring.bean.Person"
+    },
+    {
+      "name": "person.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.spring.bean.Person"
+    },
+    {
+      "name": "person.dog",
+      "type": "com.spring.bean.Dog",
+      "sourceType": "com.spring.bean.Person"
+    },
+    {
+      "name": "person.last-name",
+      "type": "java.lang.String",
+      "description": "<bean class=\"Person\">  <property name =\"LastName\" value=\"字面量\/  ${key}从配置文件中获取值\/  #{SpEl}spring表达式\"><\/property> <\/bean>",
+      "sourceType": "com.spring.bean.Person"
+    },
+    {
+      "name": "person.lists",
+      "type": "java.util.List<java.lang.Object>",
+      "sourceType": "com.spring.bean.Person"
+    },
+    {
+      "name": "person.maps",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "com.spring.bean.Person"
+    }
+  ],
+  "hints": []
+}
